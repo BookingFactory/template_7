@@ -1,5 +1,5 @@
 <a id="top-scroll"></a>
-<section class="animate" id="home">
+<section class="animate" id="home" attr-test="updated">
   <div id="home-slider">
     <ul class="slides">
       <li class="has-parallax">
@@ -360,6 +360,16 @@
     <a href="{{ website_data.youtube }}">
       <div class="large-3 google-plus text-center social-link">
         <div class="icon social_youtube"></div>
+        <div class="link-hover">
+          <h6 class="text-white">Follow us</h6>
+        </div>
+      </div>
+    </a>
+  {% endif %}
+  {% if website_data.pinterest %}
+    <a href="{{ website_data.pinterest }}">
+      <div class="large-3 pinterest text-center social-link">
+        <div class="icon social_pinterest"></div>
         <div class="link-hover">
           <h6 class="text-white">Follow us</h6>
         </div>
