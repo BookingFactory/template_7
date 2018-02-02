@@ -1,5 +1,5 @@
 <a id="top-scroll"></a>
-<section class="animate" id="home" attr-test="updated">
+<section class="animate" id="home">
   <div id="home-slider">
     <ul class="slides">
       <li class="has-parallax">
@@ -165,9 +165,19 @@
                 {% endfor %}
               </ul>
               {% if website_data.booking_link == nil or website_data.booking_link == '' %}
-                <a href="{{ '/book' | link_to: website_data.link_object}}" class="booking-form-link">Book Now</a>
+                <a href="{{ '/book' | link_to: website_data.link_object}}" class="booking-form-link">
+                  <div class="btn send-btn" id="form-button">
+                    Book Now
+                    <div class="icon arrow_right"></div>
+                  </div>
+                </a>
               {% else %}
-                <a href="{{website_data.booking_link}}" class="booking-form-link">Book Now</a>
+                <a href="{{website_data.booking_link}}" class="booking-form-link">
+                  <div class="btn send-btn" id="form-button">
+                    Book Now
+                    <div class="icon arrow_right"></div>
+                  </div>
+                </a>
               {% endif %}
             </div>
           </div>
@@ -360,16 +370,6 @@
     <a href="{{ website_data.youtube }}">
       <div class="large-3 google-plus text-center social-link">
         <div class="icon social_youtube"></div>
-        <div class="link-hover">
-          <h6 class="text-white">Follow us</h6>
-        </div>
-      </div>
-    </a>
-  {% endif %}
-  {% if website_data.pinterest %}
-    <a href="{{ website_data.pinterest }}">
-      <div class="large-3 pinterest text-center social-link">
-        <div class="icon social_pinterest"></div>
         <div class="link-hover">
           <h6 class="text-white">Follow us</h6>
         </div>
