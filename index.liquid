@@ -164,13 +164,10 @@
                   </li>
                 {% endfor %}
               </ul>
-              {% if website_data.booking_link == nil or website_data.booking_link == "" %}
-                <a class="booking-form-link" href="#">
-                  <div class="btn send-btn" id="form-button">
-                    Book Now
-                    <div class="icon arrow_right"></div>
-                  </div>
-                </a>
+              {% if website_data.booking_link == nil or website_data.booking_link == '' %}
+                <a href="{{ '/book' | link_to: website_data.link_object}}" class="booking-form-link">Book Now</a>
+              {% else %}
+                <a href="{{website_data.booking_link}}" class="booking-form-link">Book Now</a>
               {% endif %}
             </div>
           </div>
