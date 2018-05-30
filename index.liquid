@@ -423,17 +423,17 @@
           say hello.
         </h4>
         <div class="contact-form">
-          <input class="highlight" id="form-name" name="name" placeholder="Name:" type="text"></input>
-          <input class="highlight" id="form-email" name="email" placeholder="Email:" type="text"></input>
-          <input class="highlight" id="form-msg" name="message" placeholder="Message:" type="text"></input>
+          <input class="highlight" id="form-name" name="name" placeholder="{{ 'Name' | t: website_data.lang }}:" type="text"></input>
+          <input class="highlight" id="form-email" name="email" placeholder="{{ 'Email' | t: website_data.lang }}:" type="text"></input>
+          <input class="highlight" id="form-msg" name="message" placeholder="{{ 'Message' | t: website_data.lang }}:" type="text"></input>
         </div>
         <input class="highlight" id="form-answer" name="answer" placeholder="{{website_data.rand_a}} + {{website_data.rand_b}} = ..." type="text"></input>
         <div class="btn send-btn" id="form-button">
-          Send
+          {{ 'Send' | t: website_data.lang }}
           <div class="icon arrow_right">&nbsp;</div>
         </div>
         <div class="btn reset-btn">
-          Reset
+          {{ 'Reset' | t: website_data.lang }}
           <div class="icon icon_close">&nbsp;</div>
         </div>
         <div id="form-sent">
