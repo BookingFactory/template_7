@@ -427,7 +427,8 @@
           <input class="highlight" id="form-email" name="email" placeholder="{{ 'Email' | t: website_data.lang }}:" type="text"></input>
           <input class="highlight" id="form-msg" name="message" placeholder="{{ 'Message' | t: website_data.lang }}:" type="text"></input>
         </div>
-        <input class="highlight" id="form-answer" name="answer" placeholder="{{website_data.rand_a}} + {{website_data.rand_b}} = ..." type="text"></input>
+        <div class="g-recaptcha" data-sitekey="6LfJKIoUAAAAAESIKCuCb-QBRSsO5q2jhXTEZ73I"></div>
+
         <div class="btn send-btn" id="form-button">
           {{ 'Send' | t: website_data.lang }}
           <div class="icon arrow_right">&nbsp;</div>
