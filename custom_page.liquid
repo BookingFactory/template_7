@@ -1,5 +1,5 @@
 <section id="blog" data-attr="custom_page">
-  {% if page.website_page_photos %}
+  {% if page.website_page_photos.first %}
     <div id="blog-bg" style="background-image: url({{ page.website_page_photos.first.image | attachment_url: 'public_big' }})"></div>
   {% else %}
     <div id="blog-bg" style="background-image: url( {{website_data.blog_cover.image | attachment_url: 'public_big' }} )" ></div>
