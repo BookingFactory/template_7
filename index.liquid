@@ -166,14 +166,14 @@
               </ul>
               {% if website_data.booking_link == nil or website_data.booking_link == '' %}
                 <a href="{{ '/book' | link_to: website_data.link_object}}" class="booking-form-link">
-                  <div class="btn send-btn" id="form-button">
+                  <div onclick="location.href='{{ '/book' | link_to: website_data.link_object}}';" class="btn send-btn" id="form-button">
                     Book Now
                     <div class="icon arrow_right"></div>
                   </div>
                 </a>
               {% else %}
                 <a href="{{website_data.booking_link}}" class="booking-form-link">
-                  <div class="btn send-btn" id="form-button">
+                  <div onclick="location.href='{{website_data.booking_link}}';" class="btn send-btn" id="form-button">
                     Book Now
                     <div class="icon arrow_right"></div>
                   </div>
